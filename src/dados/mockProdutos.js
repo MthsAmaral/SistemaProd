@@ -6,7 +6,8 @@ export const produtos = [
         "precoVenda":20.00,
         "qtdEstoque":100,
         "urlImagem":"",
-        "dataValidade":"31/12/2999"
+        "dataValidade":"31/12/2999",
+        
     },
     {
         "codigo":2,

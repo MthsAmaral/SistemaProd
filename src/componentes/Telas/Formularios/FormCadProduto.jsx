@@ -204,10 +204,11 @@ export default function FormCadProdutos(props) {
                     <Form.Label>Data Validade</Form.Label>
                     <Form.Control
                         required
-                        type="text"
+                        type="date"
                         id="dataValidade"
                         name="dataValidade"
                         value={produto.dataValidade}
+                        //disabled={props.modoEdicao}
                         onChange={manipularMudanca}
                     />
                     <Form.Control.Feedback type="invalid">Por favor, informe a data de validade do produto!</Form.Control.Feedback>
