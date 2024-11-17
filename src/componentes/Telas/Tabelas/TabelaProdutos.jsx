@@ -8,6 +8,7 @@ export default function TabelaProdutos(props) {
     function alterarProduto(produto) {
         props.setExibirTabela(false);
         props.setProdutoSelecionado(produto);
+        produto.dataValidade = new Date(produto.dataValidade).toLocaleDateString();
         props.setModoEdicao(true);
     }
     
@@ -74,7 +75,7 @@ export default function TabelaProdutos(props) {
                                         "width": "40px",
                                         "height": "40px"
                                     }} src={produto.urlImagem} alt="foto do produto" /></td>
-                                    <td>{new Date(produto.dataValidade).toLocaleDateString('pt-BR')}</td>
+                                    <td>{new Date(produto.dataValidade).toLocaleDateString()}</td>
                                     <td>{produto.categoria.descricao}</td>
                                     <td>
                                         <Button onClick={() => {
