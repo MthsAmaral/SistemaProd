@@ -7,6 +7,7 @@ import toast, {Toaster} from 'react-hot-toast';
 
 export default function FormCadProdutos(props) {
     const [produto, setProduto] = useState(props.produtoSelecionado);
+    //const [listaDeProdutos, setListaDeProdutos] = useState([])
     const [formValidado, setFormValidado] = useState(false);
     const [categorias, setCategorias] = useState([]);
     const [temCategorias, setTemCategorias] = useState(false);
@@ -28,6 +29,13 @@ export default function FormCadProdutos(props) {
         
     },[]); //didMount
 
+    /*useEffect(() => {
+        alterarProduto().then((lista) => {
+            setListaDeProdutos(lista)
+        })
+    }, [listaDeProdutos])*/
+
+    
     function selecionarCategoria(evento){
         setProduto({...produto, 
                        categoria:{
